@@ -6,6 +6,12 @@ const exampleImages = [
   "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759",
   "https://images.unsplash.com/photo-1532009324734-20a7a5813719",
   "https://images.unsplash.com/photo-1524429656589-6633a470097c",
+  "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0", // Nature
+  "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6", // Animals
+  "https://images.unsplash.com/photo-1519125323398-675f0ddb6308", // Food
+  "https://images.unsplash.com/photo-1502767089025-6572583495b4", // Travel
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330", // People
+  "https://images.unsplash.com/photo-1518770660439-4636190af475", // Technology
 ];
 
 const Index = () => {

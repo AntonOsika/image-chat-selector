@@ -30,26 +30,26 @@ const Index = () => {
       return;
     }
 
-    try {
-      const response = await fetch("https://freider-kive-demo--sglang-inference-web-api.modal.run", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ image_url: imageUrl, question }),
+    fetch("https://freider-kive-demo--sglang-inference-web-api.modal.run", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ image_url: imageUrl, question }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setAnswer(data.answer);
+      })
+      .catch((error) => {
+        toast({
+          title: "Error",
+          description: "An error occurred while fetching the answer.",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
       });
-
-      const data = await response.json();
-      setAnswer(data.answer);
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "An error occurred while fetching the answer.",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-    }
   };
 
   return (

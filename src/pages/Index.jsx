@@ -55,7 +55,7 @@ const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <VStack spacing={4} width="100%">
-        <Text fontSize="2xl">Chat with an Image</Text>
+        <Text fontSize="2xl">Chat with an Image, powered by Modal</Text>
         <HStack spacing={4}>
           {exampleImages.map((url, index) => (
             <Image
